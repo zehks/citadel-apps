@@ -42,4 +42,4 @@ containers:
       BITCOIN_RPC_PASS: $BITCOIN_RPC_PASS
       LND_IP: $LND_IP
       LND_GRPC_PORT: $LND_GRPC_PORT
-      GNUPGHOME: /app/data/
+      GNUPGHOME: /gpg
