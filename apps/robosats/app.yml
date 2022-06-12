@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2021 Aaron Dewes
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
+# yaml-language-server: $schema=../../app-standard-v3.yml
+
+version: 3
+metadata:
+  category: Finance
+  name: RoboSats
+  version: 0.0.1
+  tagline: robosats
+  description: >-
+    Robosats
+  developers:
+    zehks: 0x8a07b27ab04ead2a@ln.tips
+  dependencies:
+    - bitcoind
+    - lnd
+  repo: https://github.com/zehks/robosats-template
+  support: https://github.com/zehks/robosats-template
+  gallery:
+    - https://raw.githubusercontent.com/Reckless-Satoshi/robosats/main/frontend/static/assets/images/bot_avatar-01.png
+  defaultPassword: $APP_SEED
+  torOnly: false
+containers:
+  - name: app  
+    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:aaee43dec97aaac9f1f34b2f6e61b8173d0b02de08a0bf791a8410d3b71e2560
+    port: 2140
+    user: 1000:1000
+    data:
+      - data:/data
+    environment:
+      BITCOIN_NETWORK: $BITCOIN_NETWORK
+      BITCOIN_IP: $BITCOIN_IP
+      BITCOIN_RPC_PORT: $BITCOIN_RPC_PORT
+      BITCOIN_RPC_USER: $BITCOIN_RPC_USER
+      BITCOIN_RPC_PASS: $BITCOIN_RPC_PASS
+      LND_IP: $LND_IP
+      LND_GRPC_PORT: $LND_GRPC_PORT
