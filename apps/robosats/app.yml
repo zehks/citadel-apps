@@ -28,6 +28,8 @@ containers:
     image: ghcr.io/zehks/robosats-template/robosats:master@sha256:2b6d1a6f620a1bc02c669cffe260a660d4834db7d92fcf669b9968ac8625efc0
     port: 2140
     user: 1000:1000
+    mounts:
+      lnd: /root/.lnd
     data:
       - data:/data
     environment:
