@@ -15,7 +15,6 @@ metadata:
   developers:
     zehks: 0x8a07b27ab04ead2a@ln.tips
   dependencies:
-    - bitcoind
     - lnd
   repo: https://github.com/zehks/robosats-template
   support: https://github.com/zehks/robosats-template
@@ -32,6 +31,7 @@ containers:
       lnd: /app/lnd
     data:
       - data:/data
+      - ~/.gnupg:/.gnupg
     environment:
       BITCOIN_NETWORK: $BITCOIN_NETWORK
       BTC_NETWORK: $BITCOIN_NETWORK
@@ -41,4 +41,4 @@ containers:
       BITCOIN_RPC_PASS: $BITCOIN_RPC_PASS
       LND_IP: $LND_IP
       LND_GRPC_PORT: $LND_GRPC_PORT
-      GNUPGHOME: /app/data/.gnupg
+      GNUPGHOME: /app/.gnupg
