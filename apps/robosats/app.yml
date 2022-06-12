@@ -25,7 +25,7 @@ metadata:
   torOnly: false
 containers:
   - name: app  
-    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:1a46736e9eee462f3027f0b61c5e5adca9fea7dd63df44d323b0020715afed0e
+    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:bc78a94466f4320a87b416080b1ae47a98c375ac7e1771bb40a35938524066a6
     port: 2140
     user: 1000:1000
     mounts:
@@ -41,3 +41,4 @@ containers:
       BITCOIN_RPC_PASS: $BITCOIN_RPC_PASS
       LND_IP: $LND_IP
       LND_GRPC_PORT: $LND_GRPC_PORT
+      GNUPGHOME: /app/data/.gnupg
