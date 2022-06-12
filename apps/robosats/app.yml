@@ -30,9 +30,9 @@ containers:
     user: 1000:1000
     mounts:
       lnd: /app/lnd
-      gpg_volume: /app/gpg
     data:
       - data:/data
+      - gpg_volume:/gpg
     environment:
       BITCOIN_NETWORK: $BITCOIN_NETWORK
       BTC_NETWORK: $BITCOIN_NETWORK
