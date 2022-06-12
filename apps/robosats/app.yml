@@ -25,11 +25,11 @@ metadata:
   torOnly: false
 containers:
   - name: app  
-    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:2b6d1a6f620a1bc02c669cffe260a660d4834db7d92fcf669b9968ac8625efc0
+    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:873586f85dc7dffa9ba1a879cdc7c0b9eaed2814f48fbf04acb843ac409508f3
     port: 2140
     user: 1000:1000
     mounts:
-      lnd: /root/.lnd
+      lnd: /app/lnd
     data:
       - data:/data
     environment:
