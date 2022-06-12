@@ -15,6 +15,7 @@ metadata:
   developers:
     zehks: 0x8a07b27ab04ead2a@ln.tips
   dependencies:
+    - bitcoind
     - lnd
   repo: https://github.com/zehks/robosats-template
   support: https://github.com/zehks/robosats-template
