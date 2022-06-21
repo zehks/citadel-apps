@@ -25,7 +25,7 @@ metadata:
   torOnly: false
 containers:
   - name: app  
-    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:3cb1d1949f6c7b02358d603533a24b3aace253f250683de35f951a08692577b4
+    image: ghcr.io/zehks/robosats-template/robosats:master@sha256:682a417c2a23a8f37eac043cb2a20bb66ad7b119f574d414e9fe285bce35b10a
     port: 2140
     user: 1000:1000
     mounts:
